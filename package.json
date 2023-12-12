@@ -19,6 +19,7 @@
     "chalk": "^4.1.1",
     "figlet": "^1.5.2",
     "mycli": "^1.5.1",
-    "yargs": "^16.1.1"
+    "yargs": "^16.1.1",
+    "abstract-syntax-tree": "^2.21.1"
   }
 }
