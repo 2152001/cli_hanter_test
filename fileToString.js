@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 const fileToString = (file) => {
-    return fs.readFileSync(`../${file}`,
+    return fs.readFileSync(`./${file}`,
     { encoding: 'utf8', flag: 'r' });
 }
 
