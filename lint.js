@@ -1,5 +1,4 @@
 const ast = require('abstract-syntax-tree')
-const { rules } = require('./config')
 const no_buffer_constructor = require('./rules/no_buffer_constructor')
 const no_eval = require('./rules/no_eval')
 const no_like_eval = require('./rules/no_like_eval')
@@ -11,7 +10,7 @@ const chalk = require('chalk')
 const stringToFile = require('./stringToFile')
 
 
-const lint = (file, fix) => {
+const lint = (file, fix, rules) => {
     const source = fileToString(file)
     const tree = ast.parse(source, {
         loc: true

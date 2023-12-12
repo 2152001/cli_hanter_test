@@ -3,15 +3,15 @@ const extractFiles = require('./extractor')
 const lint = require('./lint')
 
 
-const run = () => {
+const run = (rules) => {
     const files = extractFiles();
 
     files.forEach(file => {
         if(file.endsWith('.js')) {
             if(process.argv.includes('--fix')) {
-                lint(file, true)
+                lint(file, true,rules)
             }else {
-                lint(file, false)
+                lint(file, false,rules)
             }
         }
     });
